@@ -37,13 +37,13 @@ compiler.plugin('compilation', function (compilation) {
 })
 
 // proxy api requests
-// Object.keys(proxyTable).forEach(function (context) {
-//   var options = proxyTable[context]
-//   if (typeof options === 'string') {
-//     options = { target: options }
-//   }
-//   app.use(proxyMiddleware(context, options))
-// });
+Object.keys(proxyTable).forEach(function (context) {
+  var options = proxyTable[context]
+  if (typeof options === 'string') {
+    options = { target: options }
+  }
+  app.use(proxyMiddleware(context, options))
+});
 
 // mock/proxy api requests
 var mockDir = path.resolve(__dirname, '../mock');

@@ -4,6 +4,7 @@
  */
 const Hello = r => require(['views/hello'], r);
 const NotFound = r => require(['views/notfound'], r);
+const Test = r => require(['views/test'], r);
 
 // 根目录
 const rootPath = '';
@@ -11,7 +12,8 @@ const rootPath = '';
 // 页面路由
 const routes = [
   {path: '', redirect: {name: 'hello'}},
-  {path: '/hello', component: Hello, name: 'hello'}
+  {path: '/hello', component: Hello, name: 'hello'},
+  {path: '/test', component: Test, name: 'test'}
 ].map(route => {
   route.path = rootPath + route.path;
   return route;

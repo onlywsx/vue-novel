@@ -12,11 +12,11 @@
     "test": "npm run unit && npm run e2e"
   },
   "dependencies": {
+    "es6-promise": "^4.0.5",
     "vue": "^2.0.1",
-    "vuex": "^2.0.0",
     "vue-router": "^2.0.1",
-    "whatwg-fetch": "^1.0.0",
-    "es6-promise": "^4.0.5"
+    "vuex": "^2.0.0",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -70,7 +70,6 @@
     "sass-loader": "^4.0.2",
     "selenium-server": "2.53.1",
     "shelljs": "^0.7.4",
-    "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
     "url-loader": "^0.5.7",
     "vue-loader": "^9.4.0",

@@ -22,7 +22,8 @@ module.exports = {
       'views': path.resolve(__dirname, '../src/views'),
       'routes': path.resolve(__dirname, '../src/routes'),
       'store': path.resolve(__dirname, '../src/store'),
-      'components': path.resolve(__dirname, '../src/components')
+      'components': path.resolve(__dirname, '../src/components'),
+      'libs': path.resolve(__dirname, '../src/libs')
     }
   },
   resolveLoader: {

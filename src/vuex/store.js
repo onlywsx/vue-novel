@@ -14,7 +14,8 @@ const options = {
 
   // 多页面共享数据
   state: {
-    message: '',
+    list: [],
+    content: [],
   },
 
   // 操作
