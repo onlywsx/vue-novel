@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="word-wrap: break-word;" v-for="(item, index) in content" v-html="item"></div>
+    <div style="word-wrap: break-word;" v-html="content"></div>
     <ul>
       <li v-for="(item, index) in list" :key="index">
         <a :href="item.url" target="_blank">{{item.name}}</a>
@@ -11,16 +11,18 @@
 
 <script>
   import {mapState} from 'vuex'
-  import catalog from 'libs/catalog';
-  import chapter from 'libs/chapter';
+  import catalog from 'libs/content/catalog';
+  import chapter from 'libs/content/chapter';
 
   export default {
-    computed: mapState([
-      'list',
-      'content'
-    ]),
+    computed: {
+      ...mapState([
+        'list',
+        'content'
+      ])
+    },
     methods: {
-      getCatalog() {
+      async getCatalog() {
         // let url = '/m.vodtw.com/wapbook-15248/';
         let url = '/www.vodtw.com/Html/Book/8/8924/Index.html';
         // let url = '/www.biquge.lu/book/2379/';
@@ -30,13 +32,13 @@
         // let url = '/www.biquwu.cc/biquge/3_3148/';
         // let url = '/www.baoliny.com/64364/index.html';
         // let url = '/www.qu.la/book/5509/';
-        catalog.init(url);
-        this.$store.commit('list', catalog.catalogs);
+        await catalog.init(url);
+        this.$store.commit('list', catalog.getCatalogs());
       },
-      getContent() {
+      async getContent() {
         let url = '/www.vodtw.com/Html/Book/8/8924/4614448.html';
-        chapter.init(url);
-        this.$store.commit('content', chapter.contents);
+        await chapter.init(url);
+        this.$store.commit('content', chapter.getChapter());
       }
     },
     mounted: function () {

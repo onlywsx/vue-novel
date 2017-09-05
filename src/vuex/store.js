@@ -15,7 +15,7 @@ const options = {
   // 多页面共享数据
   state: {
     list: [],
-    content: [],
+    content: '',
   },
 
   // 操作
