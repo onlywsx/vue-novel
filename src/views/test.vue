@@ -35,15 +35,15 @@
         await catalog.init(url);
         this.$store.commit('list', catalog.getCatalogs());
       },
-      async getContent() {
+      async getChapter() {
         let url = '/www.vodtw.com/Html/Book/8/8924/4614448.html';
         await chapter.init(url);
         this.$store.commit('content', chapter.getChapter());
       }
     },
     mounted: function () {
-      this.getCatalog();
-      this.getContent();
+      // this.getCatalog();
+      this.getChapter();
     }
   }
 </script>
