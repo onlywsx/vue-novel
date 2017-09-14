@@ -60,7 +60,7 @@ const renderPage = config => {
           }
 
           if (Math.abs(spaceWidth) > 1) {
-            pageStr += '<p style="letter-spacing: ' + (letterSpacing + spaceWidth / lineCharCounter) + 'px;">' + lineStr + '</p>'
+            pageStr += '<p style="letter-spacing: ' + (letterSpacing + spaceWidth / lineCharCounter) + 'px; display: flex; justify-content: space-between;">' + lineStr + '</p>'
           } else {
             pageStr += '<p>' + lineStr + '</p>'
           }

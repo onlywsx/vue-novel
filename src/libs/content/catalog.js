@@ -41,7 +41,7 @@ export default {
     // 匹配任何标签
     const regAnyTag = /<[^>]*>/g;
     // 匹配章节
-    const regChapter = /(第.*?章|第.*?回|序\s*章|楔\s*子|引\s*子|大结局|尾\s*声|后\s*记)/;
+    const regChapter = /(第.*?章|第.*?回|序\s*章|序\s*幕|楔\s*子|引\s*子|大结局|尾\s*声|后\s*记)/;
     // 匹配章节连接文件
     const regChapterLink = /\/?\d{4,}\.html?/i;
     // 匹配下一页
